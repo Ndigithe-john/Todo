@@ -1,38 +1,117 @@
-.App {
+body {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+h1 {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-wrapper {
+  background-color: #1f1e1e;
+  padding: 2em;
+  width: fit-content;
+  margin-top: 3%;
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-input {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-bottom: 1px solid grey;
+  padding-bottom: 25px;
+  margin-right: 25px;
+}
+.todo-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 25px;
+}
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.todo-input-item input {
+  padding: 10px;
+  border: none;
+  width: 250px;
+}
+.todo-input-item input:focus {
+  outline: none;
+  outline: 2px solid rgb(102, 218, 102);
+}
+.mybtn {
+  background-color: rgb(74, 196, 74);
   color: white;
+  border: none;
+  margin-top: 25px;
+  padding: 10px;
+  width: 60px;
+  cursor: pointer;
+}
+.mybtn:hover {
+  background-color: rgb(138, 231, 138);
+}
+.btn-area {
+  margin-bottom: 15px;
+}
+.taskBtn {
+  background-color: #000000;
+  color: white;
+  border: none;
+  margin-top: 25px;
+  padding: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+.active {
+  background-color: rgb(29, 189, 29);
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+.todo-list-items {
+  background-color: rgba(0, 0, 0, 0.541);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 5px gray;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list-items h3 {
+  font-size: 25px;
+  color: rgb(113, 240, 113);
+  font-weight: bold;
+  margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list-items p {
+  margin-top: 0px;
+  color: gray;
+  font-size: 14px;
+}
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+.icon:hover {
+  color: red;
+}
+.check-icon {
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgb(0, 253, 0);
+  cursor: pointer;
+}
+.check-icon:hover {
+  color: rgb(11, 252, 11);
 }
